@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from MovieApp.models import Base
-from MovieApp.database import engine
-from MovieApp.routers import auth, movies, admin, users, comment
+from .models import Base
+from .database import engine
+from .routers import auth, movies, admin, users, comment
 
 
 app = FastAPI()
