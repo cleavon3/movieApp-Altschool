@@ -1,11 +1,11 @@
 from typing import Optional, Annotated, List, Type
 from fastapi import APIRouter, HTTPException, Path, Query, Depends
 from pydantic import BaseModel, Field
-from ..models import Movie, Users
-from ..database import sessionLocal
+from MovieApp.models import Movie, Users
+from MovieApp.database import sessionLocal
 from sqlalchemy.orm import Session
 from starlette import status
-from .auth import get_current_user
+from MovieApp.auth import get_current_user
 
 router = APIRouter()
 

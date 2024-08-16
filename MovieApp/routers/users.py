@@ -1,11 +1,11 @@
 from typing import Optional, Annotated
 from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel, Field
-from ..models import Users
-from ..database import sessionLocal
+from MovieApp.models import Users
+from MovieApp.database import sessionLocal
 from sqlalchemy.orm import Session
 from starlette import status
-from .auth import get_current_user
+from MovieApp.auth import get_current_user
 from passlib.context import CryptContext
 
 router = APIRouter(
